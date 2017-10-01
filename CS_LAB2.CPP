@@ -11,7 +11,7 @@ using namespace std; //container for preprocessor directives
 int main()
 {
 	float  growth, days, count;
-	float population = 0, startPop;
+	float population = 0, startPop, endPop;
 	do //Validation loop for startPop > 2
 	{
 		cout << "Enter starting population: ";
@@ -69,11 +69,13 @@ int main()
 	cout << "Day" << '\t' << "Population" << '\t' << "Population" << endl
 		<< '\t' << "at day start" << '\t' << "at day end" << endl
 		<< "------------------------------------------------------" << endl;
-
+    growth = growth * .01;
 	for (count = 1; count < (days + 1); count++)//Code for calculating start and end population of each day. Also output code.
 	{
-		cout << (int)count << '\t' << setprecision(2) << fixed << startPop + (growth * .01 * startPop * (count - 1))
-			<< '\t' << startPop + (growth * .01 * startPop * count) << endl;
+
+	    endPop = (startPop * growth) + startPop;
+		cout << (int)count << '\t' << setprecision(2) << fixed << startPop << '\t' << endPop << endl;
+		startPop = endPop;
 		/*
 					Write down code to compute and print out start population and end population
 					for the day
