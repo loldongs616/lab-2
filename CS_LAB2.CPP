@@ -1,8 +1,8 @@
-/*Conor James Snedeker
+/*[REDACTED]
 Lab 2
 The purpose of this program is to create a system for predicting population increases in biology.
 C++ Programming
-Professor Tolappa*/
+Professor [REDACTED]*/
 #include <iostream>
 #include <iomanip>
 using namespace std; //container for preprocessor directives
